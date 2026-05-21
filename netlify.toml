@@ -1,1 +1,2 @@
-opt/build/repo/netlify.toml
+[build]
+  publish = "wrestling-landing-page/src" 
