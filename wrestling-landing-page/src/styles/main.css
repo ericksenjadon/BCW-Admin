@@ -3,10 +3,12 @@ body { font-family:"Segoe UI", sans-serif; background:#000; color:#d6ffe3; }
 a { color:#8cffb7; text-decoration:none; }
 
 .announcement-bar { background:#05210c; color:#b9ffd8; text-align:center; padding:8px; font-size:.95rem; }
-.site-header { position:sticky; top:0; background:#070907; z-index:30; border-bottom:1px solid #112a1b; }
-.brand-row { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
+.main-nav ul { display:flex; gap:8px; list-style:none; margin:0; padding:0; align-items:center; }
+.main-nav li { margin:0; }
+.site-header { position:sticky; top:0; width:100%; background:#06120a; z-index:40; border-bottom:none; box-shadow:0 2px 10px rgba(0,0,0,0.6); }
+.brand-row { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:18px; padding:12px 18px; flex-wrap:wrap; }
 .logo { color:#9dffbf; font-weight:900; font-size:1.4rem; letter-spacing:.1rem; }
-.main-nav a { color:#cdfde4; padding:8px 10px; border-radius:5px; transition:.2s; }
+.main-nav a { color:#cdfde4; display:inline-block; padding:8px 12px; border-radius:5px; transition:.2s; }
 .main-nav a:hover { background:rgba(140,255,183,.25); color:#fff; }
 .btn-primary { background:#5dffb1; border:none; color:#0a2213; border-radius:5px; padding:8px 14px; cursor:pointer; }
 
