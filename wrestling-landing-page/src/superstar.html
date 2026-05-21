@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCW Superstar</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="announcement-bar">
+    <p>Live now: BCW Championship - Buy tickets & watch stream •</p>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <div class="logo">BCW</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="stars.html">Superstars</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-primary" id="subscribeBtn">Subscribe</button>
+    </div>
+  </header>
+
+  <main class="section superstar-detail">
+    <section id="superstarHero" class="superstar-hero">
+      <img id="superstarImage" src="" alt="Superstar">
+      <div class="superstar-bio">
+        <h1 id="superstarName">Superstar</h1>
+        <h3 id="superstarRole"></h3>
+        <p id="superstarcareer"></p>
+      </div>
+    </section>
+
+    <section id="superstarStats" class="superstar-stats">
+      <h2>Stats</h2>
+      <ul>
+        <li id="superstarHeight"></li>
+        <li id="superstarWeight"></li>
+        <li id="superstarHometown"></li>
+        <li id="superstarSignature"></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 BCW. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const stars = {
+      bok: {
+        name: 'Bok',
+        role: 'Male Superstar',
+        career: 'Powerfighter with crushing finishers.',
+        image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\bok.jpg',
+        height: '6\'3"',
+        weight: '250 lbs',
+        hometown: 'Miami, FL',
+        signature: 'N/A'
+      },
+      ethan: {
+        name: 'Ethan',
+        role: 'Male Superstar',
+        Career: 'High-paced veteran with strong strikes.',
+        image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\ethan.jpg',
+        height: '6\'1"',
+        weight: '228 lbs',
+        hometown: 'San Diego, CA',
+        signature: 'N/A'
+      },
+      malcolm: {
+        name: 'Malcolm',
+        role: 'Male Superstar',
+        Career: '.',
+        image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\malcolm.jpg',
+        height: '5\'7"',
+        weight: '122 lbs',
+        hometown: 'Kimberley, NC',
+        signature: 'Sweet Chin Music'
+
+      },
+      vania: {
+            name: 'Vania',
+            Career: 'Female Superstar',
+            career: '.',
+            image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\vania.jpg',
+            height: '5\'6"',
+            weight: '122 lbs',
+            hometown: ', NY',
+            signature: 'The V Lock'
+      },
+      nehemiah: {
+        name:'Nehemiah','role':'World Heavyweight Champion', 
+        Career:'Undisputed World Championship (3x), Mens Rumble Winner (2x), BCW World Heavyweight Championship, BCW Tag Team Championship, 24/7 Championship',
+        image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\nehemiah.jpg',
+        height: '5\'6"',
+        weight: '115 lbs',
+        hometown: 'Kimberley, NC',
+        signature: 'Trouble in Paradise'
+      },
+      caleb: { 
+        name: 'Caleb',
+        role: 'Current Rumble Winner',
+        Career: '',
+        image: 'C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\caleb.jpg',
+        height: '5\'9"',
+        weight: '115 lbs',
+        hometown: 'Kimberley, NC',
+        signature: 'Big Boot'
+       },
+       jayden: {
+    name:'Jayden', 
+    role:'Male Superstar', 
+    Career:'', 
+    image:'images/jayden.jpg',
+    height:'6\'2"', 
+    weight:'240 lbs', 
+    hometown:'Atlanta, GA', 
+    signature:'Thunder Slam'
+  },
+  naledi: {
+    name:'Naledi',
+    role:'Female Superstar', 
+    Career:'Submission specialist with lightning counters.', 
+    image:'images/naledi.jpg',
+    height:'5\'8"', 
+    weight:'135 lbs', 
+    hometown:'Cape Town, SA', 
+    signature:'Starlock'
+  },
+  deowin: {
+    name:'Deowin', role:'Male Superstar', career:'Technical wizard with an unbreakable chainypt.', image:'images/deowin.jpg',
+    height:'6\'0"', weight:'225 lbs', hometown:'Toronto, CA', signature:'Deowin Driver'
+  },
+  justin: {
+    name:'Justin', role:'Male Superstar', career:'High-flyer who thrills arenas.', image:'images/justin.jpg',
+    height:'5\'11"', weight:'205 lbs', hometown:'Los Angeles, CA', signature:'Skyfall Kick'
+  },
+  seth: {
+    name:'Seth', role:'Male Superstar', career:'Veteran contender, ring general.', image:'images/seth.jpg',
+    height:'6\'1"', weight:'220 lbs', hometown:'Shreveport, LA', signature:'Seth Storm'
+  },
+  eurith: {
+    name:'Eurith', 
+    role:'Male Superstar', 
+    career:'Speed and spark in every match.',
+    image:'images/eurith.jpg',
+    height:'5\'10"', 
+    weight:'210 lbs',
+    hometown:'New York, NY', 
+    signature:'Eurith Dive'
+  },
+  Deuze: {
+    name:'Deuze', 
+    role:'Commentator', 
+    career:'Voice of the ring and broadcast anchor.', 
+    image:'images/deuze.jpg'
+  },
+  mo: {
+    name:'Mo', 
+    role:'Referee',  
+    image:'images/mo.jpg'
+ }
+    
+};
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const star = (id && stars[id]) ? stars[id] : null;
+
+    if (!star) {
+      document.getElementById('superstarName').textContent = 'Superstar not found';
+      document.getElementById('superstarcareer').textContent = 'Return to the Superstars page and choose again.';
+      document.getElementById('superstarImage').src = 'images/default-superstar.jpg';
+      document.getElementById('superstarRole').textContent = '';
+      document.getElementById('superstarHeight').textContent = '';
+      document.getElementById('superstarWeight').textContent = '';
+      document.getElementById('superstarHometown').textContent = '';
+      document.getElementById('superstarSignature').textContent = '';
+    } else {
+      document.getElementById('superstarName').textContent = star.name;
+      document.getElementById('superstarRole').textContent = star.role;
+      document.getElementById('superstarcareer').textContent = star.career || star.Career || '';
+      document.getElementById('superstarImage').src = star.image;
+      document.getElementById('superstarImage').alt = star.name;
+      document.getElementById('superstarHeight').textContent = `Height: ${star.height}`;
+      document.getElementById('superstarWeight').textContent = `Weight: ${star.weight}`;
+      document.getElementById('superstarHometown').textContent = `Hometown: ${star.hometown}`;
+      document.getElementById('superstarSignature').textContent = `Signature: ${star.signature}`;
+    }
+  </script>
+</body>
+</html>

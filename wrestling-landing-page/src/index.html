@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCW Wrestling</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <div class="announcement-bar">
+        <p>Live now: BCW Championship - Buy tickets & watch stream •</p>
+    </div>
+
+    <header class="site-header">
+        <div class="brand-row">
+            <div class="logo">BCW</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="stars.html">Superstars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary" id="subscribeBtn">Subscribe</button>
+        </div>
+    </header>
+
+    <section class="top-highlight-bar">
+        <div class="highlight-item">
+            <span class="time">03:02</span>
+            <img src="" alt="Highlight 1">
+            <p>Title Match Recap</p>
+        </div>
+        <div class="highlight-item">
+            <span class="time">03:00</span>
+            <img src="" alt="Highlight 2">
+            <p>Ring-side Powerbomb</p>
+        </div>
+        <div class="highlight-item">
+            <span class="time">02:58</span>
+            <img src="" alt="Highlight 3">
+            <p>Tag Team Promo</p>
+        </div>
+        <div class="highlight-item">
+            <span class="time">04:10</span>
+            <img src="" alt="Highlight 4">
+            <p>Championship Celebration</p>
+        </div>
+    </section>
+
+
+    <section id="hero" class="hero-slider">
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1517638851339-4f2b2a29eb09?auto=format&fit=crop&w=1600&q=80')">
+            <div class="slide-content">
+                <h1>BCW: Time Rift</h1>
+                <p>Thursday • 2pm SAST • Youtube</p>
+                <div class="hero-cta">
+                    <a href="events.html" class="btn-secondary">View Card</a>
+                    <a href="stars.html" class="btn-secondary alt">Watch Highlights</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1540535473122-65f59db5b7dc?auto=format&fit=crop&w=1600&q=80')">
+            <div class="slide-content">
+                <h1>Championship Clash</h1>
+                <p>Live from Grand Arena • October 3</p>
+                <div class="hero-cta">
+                    <a href="events.html" class="btn-secondary">Tickets</a>
+                    <a href="contact.html" class="btn-secondary alt">Info</a>
+                </div>
+            </div>
+        </div>
+        <button class="slide-btn prev">&#10094;</button>
+        <button class="slide-btn next">&#10095;</button>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 BCW. All rights reserved.</p>
+    </footer>
+
+    <aside id="subscribeModal" class="modal hidden">
+        <div class="modal-content">
+            <button id="modalClose" class="close-btn">&times;</button>
+            <h3>Subscribe to BCW</h3>
+            <p>Get event alerts and exclusive offers.</p>
+            <input id="emailInput" type="email" placeholder="Your email">
+            <button id="submitEmail" class="btn-primary">Subscribe</button>
+            <p id="subText" class="small-text"></p>
+        </div>
+    </aside>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

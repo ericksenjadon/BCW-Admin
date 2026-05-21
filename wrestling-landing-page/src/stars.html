@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCW Superstars</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="announcement-bar">
+    <p>Live now: BCW Championship - Buy tickets & watch stream •</p>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <div class="logo"><img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\BCW_Logo.png" alt="BCW Logo" width="500" height="100"></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="stars.html" class="active">Superstars</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-primary" id="subscribeBtn">Subscribe</button>
+    </div>
+  </header>
+
+  <main class="section stars">
+    <div class="stars-toolbar">
+      <h2>Current Superstars</h2>
+      <div class="stars-controls">
+        <select id="starGroup" class="star-select">
+          <option value="all">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Champion">Champion</option>
+          <option value="Commentator">Commentator</option>
+          <option value="Ref">Referee</option>
+        </select>
+        <div class="search-wrap">
+          <input id="starSearch" type="search" placeholder="Search superstars..." />
+          <button id="searchBtn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="starGrid" class="star-grid">
+      <article class="star-card Male" data-star="bok" data-name="Bok">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\bok.jpg" alt="Bok">
+        <h3>Bok</h3>
+      </article>
+      <article class="star-card Male" data-star="ethan" data-name="Ethan">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\ethan.jpg" alt="Ethan">
+        <h3>Ethan</h3>
+      </article>
+      <article class="star-card Male" data-star="malcolm" data-name="Malcolm">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\malcolm.jpg" alt="Malcolm">
+        <h3>Malcolm</h3>
+      </article>
+      <article class="star-card Female" data-star="vania" data-name="Vania">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\vania.jpg" alt="Vania">
+        <h3>Vania</h3>
+      </article>
+      <article class="star-card Champion" data-star="nehemiah" data-name="Nehemiah">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\nehemiah.jpg" alt="Nehemiah">
+        <h3>Nehemiah</h3>
+        <p>World Heavyweight Champion</p>
+      </article>
+      <article class="star-card Champion" data-star="caleb" data-name="Caleb">
+        <img src="C:\Users\Mr B\Desktop\BCW-Site\wrestling-landing-page\images\caleb.jpg" alt="Caleb">
+        <h3>Caleb</h3>
+        <p>Current Rumble Winner</p>
+      </article>
+      <article class="star-card Male" data-star="jayden" data-name="Jayden">
+        <img src="images/jayden.jpg" alt="Jayden"><h3>Jayden</h3>
+      </article>
+      <article class="star-card Male" data-star="naledi" data-name="Naledi">
+        <img src="images/naledi.jpg" alt="Naledi"><h3>Naledi</h3>
+      </article>
+      <article class="star-card Male" data-star="deowin" data-name="Deowin">
+        <img src="images/deowin.jpg" alt="Deowin"><h3>Deowin</h3>
+      </article>
+      <article class="star-card Male" data-star="justin" data-name="Justin">
+        <img src="images/justin.jpg" alt="Justin"><h3>Justin</h3>
+      </article>
+      <article class="star-card Male" data-star="seth" data-name="Seth">
+        <img src="images/seth.jpg" alt="Seth"><h3>Seth</h3>
+      </article>
+      <article class="star-card Female" data-star="eurith" data-name="Eurith">
+        <img src="images/eurith.jpg" alt="Eurith"><h3>Eurith</h3>
+      </article>
+      <article class="star-card Commentator" data-star="deuze" data-name="Deuze">
+        <img src="images/deuze.jpg" alt="Deuze"><h3>Deuze</h3>
+        <p>Commentator</p>
+      </article>
+      <article class="star-card Referee" data-star="mo" data-name="Mo">
+        <img src="images/mo.jpg" alt="Mo"><h3>Mo</h3>
+        <p>Referee</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 BCW. All rights reserved.</p>
+  </footer>
+
+  <!-- Superstar Profile Modal -->
+  <aside id="starProfileModal" class="modal hidden">
+    <div class="modal-content profile-modal-content">
+      <button id="profileClose" class="close-btn">&times;</button>
+      <div class="profile-grid">
+        <img id="profileImage" src="" alt="">
+        <div>
+          <h2 id="profileName"></h2>
+          <p id="profileRole"></p>
+          <p id="profileBio"></p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+</body>
+</html>
