@@ -3,20 +3,27 @@ const starGrid = document.getElementById('starGrid');
   const starGroup = document.getElementById('starGroup');
 
   function refreshStars() {
-    const q = starSearch.value.trim().toLowerCase();
-    const group = starGroup.value;
+    const q = (starSearch?.value || '').trim().toLowerCase();
+    const selected = starGroup ? Array.from(starGroup.selectedOptions).map(o => o.value) : [];
+    const groups = selected.filter(v => v && v !== 'all');
     starGrid.querySelectorAll('.star-card').forEach(card => {
       const title = card.querySelector('h3').textContent.toLowerCase();
-      const matchGroup = group === 'all' || card.classList.contains(group);
       const matchQuery = !q || title.includes(q);
-      card.style.display = (matchGroup && matchQuery) ? '' : 'none';
+      let matchGroup = true;
+      if (selected.length > 0 && !selected.includes('all')) {
+        matchGroup = groups.some(g => card.classList.contains(g));
+      }
+      card.style.display = (matchQuery && matchGroup) ? '' : 'none';
     });
   }
 
   if (starSearch && starGroup && starGrid) {
     starSearch.addEventListener('input', refreshStars);
+    // works for single or multi select
     starGroup.addEventListener('change', refreshStars);
     document.getElementById('searchBtn')?.addEventListener('click', refreshStars);
+    // initial refresh to apply defaults
+    refreshStars();
   }
 
   document.addEventListener('DOMContentLoaded', function () {
